@@ -16,6 +16,6 @@
       <div class="h-[75px] flex justify-around items-center gap-2 px-2">
         <Button label="Supprimer" onClick={() => dispatch("delete", task.id)} side="left" disable={validate} />
         <Button label="Modifier" onClick={() => dispatch("edit", task)} disable={validate} />
-        <Button label={validate ? "Reprendre" : "Valider"} onClick={() => validate = !validate} side="right"/>
+        <Button label={validate ? "Reprendre" : "Valider"} onClick={() => validate = !validate} side="right" disable={false} />
       </div>
     </div>
