@@ -20,10 +20,13 @@
     <button
         class="bg-[#5C8374] py-2 px-4 rounded-b-3xl"
         on:click={() => {
-            dispatch('add', task)
-            task.name = ""
-            task.description = ""
+            if(task.name.length && task.description.length){
+                dispatch('add', task);
+            };
+            task.name = "";
+            task.description = "";
             taskId += 1;
+            return;
         }}
     >
         Ajouter une tâche
